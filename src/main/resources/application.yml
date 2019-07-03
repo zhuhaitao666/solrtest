@@ -1,0 +1,18 @@
+server:
+  port: 8081
+# mybatis映射文件位置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.ep.solrtest.bean
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/solr
+    username: root
+    password: 123456
+    type: org.apache.commons.dbcp2.BasicDataSource
+    tomcat:
+      max-idle: 10
+      max-wait: 1000000
+      max-active: 50
+      initial-size: 5

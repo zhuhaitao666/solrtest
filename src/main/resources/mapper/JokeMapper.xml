@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ep.solrtest.mapper.JokeMapper">
+  <resultMap id="BaseResultMap" type="com.ep.solrtest.bean.Joke">
+    <!--@mbg.generated generated on Wed Jul 03 11:02:09 CST 2019.-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="diynum" jdbcType="INTEGER" property="diynum" />
+    <result column="topid" jdbcType="INTEGER" property="topid" />
+    <result column="cid" jdbcType="SMALLINT" property="cid" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="title" jdbcType="LONGVARCHAR" property="title" />
+    <result column="sd1" jdbcType="LONGVARCHAR" property="sd1" />
+    <result column="sd2" jdbcType="LONGVARCHAR" property="sd2" />
+    <result column="sd3" jdbcType="LONGVARCHAR" property="sd3" />
+    <result column="sd4" jdbcType="LONGVARCHAR" property="sd4" />
+    <result column="sd5" jdbcType="LONGVARCHAR" property="sd5" />
+    <result column="info" jdbcType="LONGVARCHAR" property="info" />
+    <result column="voter" jdbcType="INTEGER" property="voter" />
+    <result column="total" jdbcType="INTEGER" property="total" />
+    <result column="display" jdbcType="TINYINT" property="display" />
+    <result column="top" jdbcType="TINYINT" property="top" />
+    <result column="dateline" jdbcType="INTEGER" property="dateline" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Wed Jul 03 11:02:09 CST 2019.-->
+    id, diynum, topid, cid, `uid`, author, title, sd1, sd2, sd3, sd4, sd5, info, voter, 
+    total, display, `top`, dateline
+  </sql>
+  <!--自定义sql语句测试-->
+  <select id="getJokeById" resultType="com.ep.solrtest.bean.Joke">
+      select * from  joke where id=#{id} ;
+   </select>
+</mapper>
